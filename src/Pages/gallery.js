@@ -13,7 +13,7 @@ const Gallery = () => {
 
   const fetchData = async () => {
     const res = await fetch(
-      `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=${FLICKR_KEY}&tags=${FLICKR_TAG}&safe_search=1&content_type=1&media=photos&geo_context=2&per_page=12&page=${
+      `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=${FLICKR_KEY}&tags=${FLICKR_TAG}&safe_search=1&content_type=1&media=photos&geo_context=2&per_page=15&page=${
         page + 1
       }&format=json&nojsoncallback=1&=https://farm66.staticflickr.com/65535/51881766730_94b48c7951.jpg`
     );

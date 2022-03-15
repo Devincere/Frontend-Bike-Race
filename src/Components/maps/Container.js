@@ -1,32 +1,42 @@
-import React, { useEffect, useRef, useState } from "react";
-import Riders from "./FetchRiders";
+import React, { useEffect, useRef } from "react";
+import { API_ROOT } from "../../service";
 
-const Container = ({ riders }) => {
+const Container = () => {
   const mapRef = useRef();
 
-  const [pins, setPins] = useState([]);
-
   useEffect(() => {
-    const map = new window.google.maps.Map(mapRef.current, {
-      zoom: 11,
-      center: { lat: 40.0, lng: -105.35 },
-    });
-
-    riders.map((r) => createMarker(map, r));
+    setTimeout(async () => {
+      const riders = await fetchRiders();
+      const map = new window.google.maps.Map(mapRef.current, {
+        zoom: 11,
+        center: { lat: 40.0, lng: -105.35 },
+      });
+      console.log({ riders });
+      riders?.map((r) => createMarker(map, r));
+    }, 500);
   }, []);
 
+  const fetchRiders = async () => {
+    const res = await fetch(`${API_ROOT}/riders`);
+
+    return await res.json();
+  };
+
   const createMarker = (map, rider) => {
+    const [lat, lng] = rider.position
+      .split(",")
+      .map((geo) => geo.split(": ")[1]);
+
     const marker = new window.google.maps.Marker({
       animation: window.google.maps.Animation.DROP,
-      position: { lat: rider.latitude, lng: rider.longitude },
+      position: { lat: Number(lat), lng: Number(lng) },
       map,
     });
 
-    const content =
-      <Riders/>;
+    //const content = <Riders />;
 
     const infowindow = new window.google.maps.InfoWindow({
-      content: content,
+      content: `<h2>${rider.firstname} ${rider.lastname}</h2>`,
     });
 
     marker.addListener("click", () => {
@@ -36,11 +46,8 @@ const Container = ({ riders }) => {
         shouldFocus: false,
       });
     });
-
-    setPins([...pins, { id: rider.id, marker }]);
   };
 
-  console.log(pins);
   return <div style={{ height: 500, width: "100%" }} ref={mapRef} />;
 };
 

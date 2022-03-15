@@ -5,7 +5,7 @@ const useForm = (validate) => {
     firstname: "",
     lastname: "",
     email: "",
-    message: "",
+    suggestion: "",
   });
 
   const [errors, setErrors] = useState({});

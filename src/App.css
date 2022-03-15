@@ -217,6 +217,9 @@ img.riders-img {
 .map-content {
   height: 100%;
   background-color: var(--main-bg-color);
+}
+
+.map-content h1 {
   color: var(--main-txt-color);
 }
 

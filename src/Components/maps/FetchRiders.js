@@ -8,7 +8,7 @@ const Riders = () => {
   }, []);
 
   const fetchRiders = async () => {
-    const res = await fetch(`/api/riders`);
+    const res = await fetch(`https://backend-bike-race.herokuapp.com/riders`);
 
     const data = await res.json();
 

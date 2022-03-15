@@ -1,24 +1,21 @@
 import React, { useEffect, useState } from "react";
+import { API_ROOT } from "../service";
 
 const Riders = () => {
-
-  const [riders, setRiders] = useState([])
+  const [riders, setRiders] = useState([]);
 
   useEffect(() => {
-    fetchRiders()
-  }, [])
+    fetchRiders();
+  }, []);
 
-
-
-  const fetchRiders = async() => {
-    const res = await fetch(`/api/riders`)
+  const fetchRiders = async () => {
+    const res = await fetch(`${API_ROOT}/riders`);
 
     const data = await res.json();
 
-    setRiders(data)
+    setRiders(data);
+  };
 
-  }
-  
   return (
     <>
       <div className="container-fluid riders-img-box">
@@ -45,14 +42,14 @@ const Riders = () => {
                 </tr>
               </thead>
               <tbody>
-                {riders.map(r => (
-                <tr key={r.id}>
-                  <th scope="row">{r.id}</th>
-                  <td>{r.firstname}</td>
-                  <td>{r.lastname}</td>
-                  <td>{r.city}</td>
-                  <td>{r.state}</td>
-                </tr>
+                {riders.map((r) => (
+                  <tr key={r.id}>
+                    <th scope="row">{r.id}</th>
+                    <td>{r.firstname}</td>
+                    <td>{r.lastname}</td>
+                    <td>{r.city}</td>
+                    <td>{r.state}</td>
+                  </tr>
                 ))}
               </tbody>
             </table>

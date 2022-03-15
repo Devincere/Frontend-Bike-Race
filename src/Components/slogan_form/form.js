@@ -10,8 +10,8 @@ const Form = ({ submit }) => {
 
   const { handleChange, handleSubmit, values, errors } = useForm(validate);
 
-  console.log({ values });
   const onSubmit = async (e) => {
+    console.log(" submitting..");
     e.preventDefault();
 
     if (handleSubmit()) {
@@ -22,63 +22,63 @@ const Form = ({ submit }) => {
   return (
     <form onSubmit={onSubmit}>
       <div className="mb-3">
-        <label for="exampleFormControlInput1" className="form-label">
+        <label htmlFor="exampleFormControlInput1" className="form-label">
           First Name
         </label>
         <input
-          type="firstName"
+          type="firstname"
           className="form-control"
           id="exampleFormControlInput1"
           placeholder="John"
           name="firstname"
           onChange={handleChange}
         />
-        {errors.firstName && !isSubmitted && (
-          <p className="form-error">{errors.firstName}</p>
+        {errors.firstname && !isSubmitted && (
+          <p className="form-error">{errors.firstname}</p>
         )}
       </div>
       <div className="mb-3">
-        <label for="exampleFormControlInput1" className="form-label">
+        <label htmlFor="exampleFormControlInput1" className="form-label">
           Last Name
         </label>
         <input
-          type="lastName"
+          type="lastname"
           className="form-control"
           id="exampleFormControlInput1"
           placeholder="Smith"
           name="lastname"
           onChange={handleChange}
         />
-        {errors.lastName && !isSubmitted && (
-          <p className="form-error">{errors.lastName}</p>
+        {errors.lastname && !isSubmitted && (
+          <p className="form-error">{errors.lastname}</p>
         )}
       </div>
       <div className="mb-3">
-        <label for="exampleFormControlInput1" className="form-label">
+        <label htmlFor="exampleFormControlInput1" className="form-label">
           Email address
         </label>
         <input
           type="email"
-          className="form-control"
+          className={`form-control ${errors.email && "is-invalid"}`}
           id="exampleFormControlInput1"
           name="email"
           onChange={handleChange}
           placeholder="name@example.com"
         />
         {errors.email && !isSubmitted && (
-          <p className="form-error">{errors.email}</p>
+          <p className="invalid-feedback">{errors.email}</p>
         )}
       </div>
       <div className="mb-3">
-        <label for="exampleFormControlTextarea1" className="form-label">
+        <label htmlFor="suggestion" className="form-label">
           Slogan
         </label>
         <textarea
           type="text"
           className="form-control"
-          id="exampleFormControlTextarea1"
+          id="suggestion"
           rows="3"
-          name="message"
+          name="suggestion"
           onChange={handleChange}
         ></textarea>
         {errors.text && !isSubmitted && (

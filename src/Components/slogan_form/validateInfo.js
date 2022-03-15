@@ -17,8 +17,8 @@ export default function validateInfo(values) {
     errors.email = "Email address is invalid";
   }
 
-  if (!values.message.trim()) {
-    errors.message = "text required";
+  if (!values.suggestion.trim()) {
+    errors.suggestion = "text required";
   }
 
   return errors;
