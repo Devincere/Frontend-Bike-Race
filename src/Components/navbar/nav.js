@@ -7,15 +7,16 @@ const Nav = () => (
     id="top-navbar"
   >
     <div className="container-fluid">
-      <a className="navbar-brand" href="#">
+      <a className="navbar-brand" href="/">
         <img
           src="/img/bike-race-logo.png"
           alt="logo"
-          width="30"
+          width="40"
           height="24"
-          className="d-inline-block align-text-top"
+          className="d-inline-block align-text-top logo-bike-nav"
         />
-        Alpes Mountains Race
+        
+        <span className="title-navbar">Hell's Mountains Race</span>
       </a>
       <button
         className="navbar-toggler"
