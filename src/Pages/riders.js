@@ -17,20 +17,17 @@ const Riders = () => {
   };
 
   return (
-    <>
-      <div className="container-fluid riders-img-box">
-        <div className="row">
-          <div className="col">
-            <img className="riders-img" src="/img/riders.jpeg" alt="riders" />
-          </div>
+    <div className="container-fluid riders-page">
+      <div className="row justify-content-center">
+        <div className="col-12 riders-img-box">
+          <img className="riders-img" src="/img/riders.jpeg" alt="riders" />
         </div>
       </div>
-      <div className="container-fluid riders-page">
-        <div className="row justify-content-center">
-          <div className="col-12 text-center">
-            <h2>Riders</h2>
-          </div>
-          <div className="col-lg-9 col-sm-12">
+      <div className="row justify-content-center">
+        <div className="col-lg-10 col-sm-12 ">
+          <div className="wrapper-riders text-center">
+            <h2 className="riders-table-title">Riders</h2>
+            <div className="table-responsive">
             <table className="table table-dark table-striped">
               <thead>
                 <tr>
@@ -53,10 +50,11 @@ const Riders = () => {
                 ))}
               </tbody>
             </table>
+            </div>
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

@@ -48,7 +48,7 @@ const Container = () => {
     });
   };
 
-  return <div style={{ height: 500, width: "100%" }} ref={mapRef} />;
+  return <div className="maps-box" ref={mapRef} />;
 };
 
 export default Container;
