@@ -27,15 +27,15 @@ const Form = ({ submit }) => {
         </label>
         <input
           type="firstname"
-          className="form-control"
+          className={`form-control ${errors.firstname && "is-invalid"}`}
           id="exampleFormControlInput1"
           placeholder="John"
           name="firstname"
           onChange={handleChange}
         />
         {errors.firstname && !isSubmitted && (
-          <p className="form-error">{errors.firstname}</p>
-        )}
+          <p className="invalid-feedback">{errors.firstname}</p>
+          )}
       </div>
       <div className="mb-3">
         <label htmlFor="exampleFormControlInput1" className="form-label">
@@ -43,15 +43,15 @@ const Form = ({ submit }) => {
         </label>
         <input
           type="lastname"
-          className="form-control"
+          className={`form-control ${errors.lastname && "is-invalid"}`}
           id="exampleFormControlInput1"
           placeholder="Smith"
           name="lastname"
           onChange={handleChange}
         />
         {errors.lastname && !isSubmitted && (
-          <p className="form-error">{errors.lastname}</p>
-        )}
+          <p className="invalid-feedback">{errors.lastname}</p>
+          )}
       </div>
       <div className="mb-3">
         <label htmlFor="exampleFormControlInput1" className="form-label">
@@ -75,17 +75,17 @@ const Form = ({ submit }) => {
         </label>
         <textarea
           type="text"
-          className="form-control"
+          className={`form-control ${errors.suggestion && "is-invalid"}`}
           id="suggestion"
           rows="3"
           name="suggestion"
           onChange={handleChange}
         ></textarea>
-        {errors.text && !isSubmitted && (
-          <p className="form-error">{errors.text}</p>
-        )}
+        {errors.suggestion && !isSubmitted && (
+          <p className="invalid-feedback">{errors.suggestion}</p>
+          )}
       </div>
-      <div className="col-12 text-center">
+      <div className="col-12 text-center btn-submit-form">
         <button className="btn btn-primary" type="submit">
           Submit form
         </button>

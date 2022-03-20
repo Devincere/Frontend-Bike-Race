@@ -6,12 +6,14 @@ const Map = () => {
   return (
     <div className="map-page">
       <div className="container-fluid">
-        <div className="row">
-          <div className="col" id="map-header-bg" />
+        <div className="row justify-content-center">
+          <div className="col-12 px-0" >
+            <img id="map-header-bg" src="/img/colorado.jpeg" alt="nature" />
+          </div>
         </div>
         <div className="row justify-content-center">
           <div
-            className="col-md-11 col-sm-12 map-wrapper"
+            className="col-xxl-9 col-md-11 col-sm-12 map-wrapper"
             id="map-container"
           >
             <h1 className="map-title text-center">Interactive Map</h1>

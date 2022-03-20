@@ -28,15 +28,11 @@ const Slogan = () => {
             Thank you for submitting your data.
           </div>
         ) : (
-          <div className="w-100">
+          <div className="container-fluid form-container">
             <div className="row justify-content-center">
-              <div className="col-sm-12 col-lg-5 text-center header-slogan">
+              <div className="col-xxl-6 col-md-7 col-sm-12 form-box">
                 <h4>Want to submit your Slogan idea ?</h4>
                 <h4>Please fill out the form below.</h4>
-              </div>
-            </div>
-            <div className="row justify-content-center">
-              <div className="col-sm-12 col-lg-5 form-fields">
                 <Form submit={submit} />
                 {message.submitted && !message.success && (
                   <div className="alert alert-danger text-center mt-4">

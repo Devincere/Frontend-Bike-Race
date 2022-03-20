@@ -51,7 +51,9 @@ function Timer() {
       <h2>
         Countdown <FontAwesomeIcon icon={faStopwatch} />
       </h2>
-      {timerComponent.length ? timerComponent : <span>Time's up!</span>}
+      <div className="timer">
+        {timerComponent.length ? timerComponent : <span>Time's up!</span>}
+      </div>
     </div>
   );
 }

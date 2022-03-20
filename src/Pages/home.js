@@ -8,7 +8,7 @@ const Home = () => (
         <div className="col-md-5 col-sm-9 text-center">
           <div className="header-content-wrap">
             <h1 className="title-home">Hell's Mountains Race</h1>
-            <div className="timer">
+            <div className="timer-box">
               <Timer />
             </div>
           </div>

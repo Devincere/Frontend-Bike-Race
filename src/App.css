@@ -25,12 +25,13 @@ html {
   text-align: end;
 }
 
-.title-navbar{
+.title-navbar {
   padding-left: 10px;
 }
 
-.logo-bike-nav{
-  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(130deg) brightness(100%) contrast(100%)
+.logo-bike-nav {
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(130deg)
+    brightness(100%) contrast(100%);
 }
 
 /*Home*/
@@ -38,10 +39,12 @@ html {
 /*Part homer-header*/
 
 #home-header-bg {
-  height: 580px;
+  width: 100%;
+  height: 70vh;
   background-image: url("/public/img/background-header.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
+  object-position: 0% 0%;
   color: rgba(0, 0, 0, 0.753);
 }
 
@@ -62,10 +65,16 @@ html {
   margin-bottom: 25px;
 }
 
-.timer {
+.timer-box {
   background-color: rgba(0, 0, 0, 0.61);
   border-radius: 12px;
   padding: 15px;
+}
+
+.timer{
+  font-size: 20px;
+  font-weight: bold;
+  color: yellow;
 }
 
 /*Part2 - home about*/
@@ -128,6 +137,7 @@ img.image-about {
 .about-us {
   background-color: var(--main-bg-color);
   color: var(--main-txt-color);
+  padding-bottom: 120px;
 }
 
 .about-img-box {
@@ -136,8 +146,10 @@ img.image-about {
 
 img.about-img {
   width: 100%;
+  height: 70vh;
   background-repeat: no-repeat;
-  background-size: contain;
+  object-fit: cover;
+  object-position: 0% 0%;
 }
 
 .about-box {
@@ -158,16 +170,16 @@ img.about-img {
 }
 .riders-img-box {
   padding: 0px !important;
-  
 }
 
 img.riders-img {
   width: 100%;
+  height: 70vh;
   object-fit: cover;
-  
+  object-position: 0% 0%;
 }
 
-.wrapper-riders{
+.wrapper-riders {
   background-color: rgba(0, 0, 0, 0.829);
   border-radius: 12px;
   margin: -100px 0px 60px 0px;
@@ -175,8 +187,8 @@ img.riders-img {
   position: relative;
 }
 
-.riders-table-title{
-margin-bottom: 20px;
+.riders-table-title {
+  margin-bottom: 20px;
 }
 
 .table {
@@ -229,21 +241,25 @@ margin-bottom: 20px;
 }
 
 .btn-load-more {
-  margin: 50px 0px;
+  margin: 90px 0px;
 }
 
 /* Interactive Map */
-.map-page{
-  padding-bottom: 70px;
+.map-page {
+  padding-bottom: 150px;
   background-color: var(--main-bg-color);
   color: var(--main-txt-color);
 }
 
 #map-header-bg {
-  height: 580px;
-  background-image: url("/public/img/colorado.jpeg");
+  width: 100%;
+  height: 60vh;
+  padding: 0%;
+
   background-repeat: no-repeat;
   background-size: cover;
+  object-fit: cover;
+  object-position: 0% 50%;
 }
 
 .map-title {
@@ -258,7 +274,7 @@ margin-bottom: 20px;
   box-shadow: 0 -1px 18px 4px rgba(0, 0, 0, 0.4);
 }
 
-.maps-box{
+.maps-box {
   text-align: center;
   justify-content: center;
   color: black;
@@ -281,9 +297,27 @@ margin-bottom: 20px;
   padding: 200px 80px 50px 10px;
 }
 
-.form-fields {
-  margin: 0px 0px 150px 0px;
+.form-container {
+  margin: 150px 0px;
 }
+
+.form-box{
+  padding: 50px!important;
+  color: var(--second-txt-color);
+  background-color: rgba(255, 255, 255, 0.603);
+  border-radius: 12px ;
+
+}
+
+.invalid-feedback{
+  margin: 0px;
+}
+
+.btn-submit-form {
+  padding: 30px 0px;
+}
+
+
 
 /*Footer*/
 
