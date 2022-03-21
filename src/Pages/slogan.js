@@ -30,7 +30,7 @@ const Slogan = () => {
         ) : (
           <div className="container-fluid form-container">
             <div className="row justify-content-center">
-              <div className="col-xxl-6 col-md-7 col-sm-12 form-box">
+              <div className="col-xxl-6 col-md-8 col-sm-12 form-box">
                 <h4>Want to submit your Slogan idea ?</h4>
                 <h4>Please fill out the form below.</h4>
                 <Form submit={submit} />

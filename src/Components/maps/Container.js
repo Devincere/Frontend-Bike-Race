@@ -33,10 +33,9 @@ const Container = () => {
       map,
     });
 
-    //const content = <Riders />;
-
     const infowindow = new window.google.maps.InfoWindow({
-      content: `<h2>${rider.firstname} ${rider.lastname}</h2>`,
+      content: `<h4 class="pins-title">#${rider.id} ${rider.firstname} ${rider.lastname}</h4>` + 
+      `<p class="pins-text">From ${rider.city}</p>`,
     });
 
     marker.addListener("click", () => {

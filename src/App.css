@@ -277,14 +277,26 @@ img.riders-img {
 .maps-box {
   text-align: center;
   justify-content: center;
-  color: black;
   width: 95%;
-  height: 81%;
+  height: 78%;
   margin: auto;
   border-radius: 12px;
   position: relative;
   overflow: hidden;
 }
+
+.pins-title {
+  color: black;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.pins-text {
+  color: black;
+  font-size: 15px;
+  margin: 0px;
+}
+
 
 /*Slogan*/
 
