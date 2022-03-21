@@ -31,20 +31,6 @@ function Timer() {
     return () => clearTimeout(timer);
   });
 
-  const timerComponent = [];
-
-  Object.keys(timeLeft).forEach((interval) => {
-    if (!timeLeft[interval]) {
-      return;
-    }
-
-    timerComponent.push(
-      <span>
-        {timeLeft[interval]} {interval}{" "}
-      </span>
-    );
-  });
-
   return (
     <div>
       <h2>Event starting the 1st April {year}</h2>
@@ -52,7 +38,7 @@ function Timer() {
         Countdown <FontAwesomeIcon icon={faStopwatch} />
       </h2>
       <div className="timer">
-        {timerComponent.length ? timerComponent : <span>Time's up!</span>}
+        {Object.keys(timeLeft).map((interval, key) => <span key={key}>{timeLeft[interval]} {interval}{" "}</span>)}
       </div>
     </div>
   );

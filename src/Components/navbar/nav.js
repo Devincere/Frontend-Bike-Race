@@ -35,32 +35,32 @@ const Nav = () => (
       >
         <ul className="navbar-nav mb-2 mb-lg-0">
           <li className="nav-item">
-            <NavLink exact to="/" className="nav-link">
+            <NavLink exact="true" to="/" className="nav-link">
               Home
             </NavLink>
           </li>
           <li className="nav-item">
-            <NavLink exact to="/about" className="nav-link">
+            <NavLink exact="true" to="/about" className="nav-link">
               About
             </NavLink>
-          </li>
+          </li> 
           <li className="nav-item">
-            <NavLink exact to="/riders" className="nav-link">
+            <NavLink exact="true" to="/riders" className="nav-link">
               Riders
             </NavLink>
           </li>
           <li className="nav-item">
-            <NavLink exact to="/gallery" className="nav-link">
+            <NavLink exact="true" to="/gallery" className="nav-link">
               Gallery
             </NavLink>
           </li>
           <li className="nav-item">
-            <NavLink exact to="/map" className="nav-link">
+            <NavLink exact="true" to="/map" className="nav-link">
               Interactive Map
             </NavLink>
           </li>
           <li className="nav-item">
-            <NavLink exact to="/slogan" className="nav-link">
+            <NavLink exact="true" to="/slogan" className="nav-link">
               Submit your slogan
             </NavLink>
           </li>
