@@ -326,6 +326,10 @@ img.riders-img {
   margin: 0px;
 }
 
+.success-box{
+  height: 100vh;
+}
+
 .btn-submit-form {
   padding: 30px 0px;
 }

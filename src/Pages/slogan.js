@@ -20,7 +20,7 @@ const Slogan = () => {
   return (
     <div className="slogan-page">
       <div
-        className="container d-flex align-items-center justify-content-center"
+        className="container d-flex align-items-center justify-content-center success-box"
         style={{ minHeight: 400 }}
       >
         {message.submitted && message.success ? (
