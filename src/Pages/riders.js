@@ -42,8 +42,8 @@ const Riders = () => {
                 {riders.map((r) => (
                   <tr key={r.id}>
                     <th scope="row">{r.id}</th>
-                    <td>{r.firstname}</td>
-                    <td>{r.lastname}</td>
+                    <td>{r.firstName}</td>
+                    <td>{r.lastName}</td>
                     <td>{r.city}</td>
                     <td>{r.state}</td>
                   </tr>
