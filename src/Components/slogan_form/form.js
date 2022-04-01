@@ -26,15 +26,15 @@ const Form = ({ submit }) => {
           First Name
         </label>
         <input
-          type="firstname"
-          className={`form-control ${errors.firstname && "is-invalid"}`}
+          type="firstName"
+          className={`form-control ${errors.firstName && "is-invalid"}`}
           id="exampleFormControlInput1"
           placeholder="John"
-          name="firstname"
+          name="firstName"
           onChange={handleChange}
         />
-        {errors.firstname && !isSubmitted && (
-          <p className="invalid-feedback">{errors.firstname}</p>
+        {errors.firstName && !isSubmitted && (
+          <p className="invalid-feedback">{errors.firstName}</p>
           )}
       </div>
       <div className="mb-3">
@@ -42,15 +42,15 @@ const Form = ({ submit }) => {
           Last Name
         </label>
         <input
-          type="lastname"
-          className={`form-control ${errors.lastname && "is-invalid"}`}
+          type="lastName"
+          className={`form-control ${errors.lastName && "is-invalid"}`}
           id="exampleFormControlInput1"
           placeholder="Smith"
-          name="lastname"
+          name="lastName"
           onChange={handleChange}
         />
-        {errors.lastname && !isSubmitted && (
-          <p className="invalid-feedback">{errors.lastname}</p>
+        {errors.lastName && !isSubmitted && (
+          <p className="invalid-feedback">{errors.lastName}</p>
           )}
       </div>
       <div className="mb-3">

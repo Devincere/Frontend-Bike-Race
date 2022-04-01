@@ -2,8 +2,8 @@ import { useState, useEffect } from "react";
 
 const useForm = (validate) => {
   const [values, setValues] = useState({
-    firstname: "",
-    lastname: "",
+    firstName: "",
+    lastName: "",
     email: "",
     suggestion: "",
   });
