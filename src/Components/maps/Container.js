@@ -34,7 +34,7 @@ const Container = () => {
     });
 
     const infowindow = new window.google.maps.InfoWindow({
-      content: `<h4 class="pins-title">#${rider.id} ${rider.firstname} ${rider.lastname}</h4>` + 
+      content: `<h4 class="pins-title">#${rider.id} ${rider.firstName} ${rider.lastName}</h4>` + 
       `<p class="pins-text">From ${rider.city}</p>`,
     });
 
