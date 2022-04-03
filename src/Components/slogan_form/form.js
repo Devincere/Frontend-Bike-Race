@@ -87,7 +87,7 @@ const Form = ({ submit }) => {
       </div>
       <div className="col-12 text-center btn-submit-form">
         <button className="btn btn-primary" type="submit">
-          Submit form
+          Send Slogan
         </button>
         {!error && isSubmitted && (
           <div className="row justify-content-center">
