@@ -4,8 +4,8 @@ import { faStopwatch } from "@fortawesome/free-solid-svg-icons";
 
 function Timer() {
   const calculateTimeLeft = () => {
-    let year = new Date().getFullYear();
-    const difference = +new Date(`${year}-04-1`) - +new Date();
+    //let year = new Date().getFullYear();
+    const difference = +new Date(`2023-04-1`) - +new Date();
     let timeLeft = {};
 
     if (difference > 0) {
@@ -33,7 +33,7 @@ function Timer() {
 
   return (
     <div>
-      <h2>Event starting the 1st April {year}</h2>
+      <h2>Event starting the 1st April 2023</h2>
       <h2>
         Countdown <FontAwesomeIcon icon={faStopwatch} />
       </h2>
